@@ -1,0 +1,18 @@
+<h3>Holaaaa *ngFor, Listado de Heroes</h3>
+
+<ul class="mt-2 list-group">
+    <li *ngFor="let name of names" class="list-group-item">{{name}}</li>
+</ul>
+
+<button *ngIf="names.length > 0" (click)="borrarUltimoHeroe()" class="btn btn-info mt-4">Borrar ultimo heroe</button>
+<br>
+<button (click)="recuperarUltimoHeroe()" class="btn btn-success mt-4">Recuperar heroe borrado</button>
+
+
+<div *ngIf="last; else p">
+    <p class="mt-2">Heroe borrado: {{last}}</p>
+</div>
+
+<ng-template #p>
+    <p class="mt-2" id="p">No se ha borrado nada</p>
+</ng-template>
