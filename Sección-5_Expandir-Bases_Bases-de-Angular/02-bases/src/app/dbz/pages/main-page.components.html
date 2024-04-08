@@ -1,0 +1,19 @@
+<h2>Seccion de listar, formulario, añadir elementos a la lista, borrar por uuid, etc</h2>
+<hr>
+
+<div class="row">
+
+    <div class="col-6">
+
+        <!-- componenete del listado -->
+        <app-dbz-listado (indice)="borrarPersonajePorID($event)" [listadopersonajes] = "personajes" ></app-dbz-listado>
+
+    </div>
+
+    <div class="col-6">
+        <!-- componenete formulario -->
+        <app-dbz-add-personaje (nuevoPersonaje)="nuevopersonaje($event)" ></app-dbz-add-personaje>
+
+    </div>
+
+</div>
